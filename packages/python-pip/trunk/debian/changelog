@@ -1,0 +1,5 @@
+python-pip (0.3.1-1) unstable; urgency=low
+
+  * Initial release.  Closes: #522135.
+
+ -- Jeff Licquia <licquia@debian.org>  Tue, 21 Apr 2009 21:10:13 -0400
