@@ -1,4 +1,4 @@
-python-pip (0.3.1-2) unstable; urgency=low
+python-pip (0.5.1-1) unstable; urgency=low
 
   * New upstream release
   * Using dh7 + rules.tiny
@@ -7,8 +7,9 @@ python-pip (0.3.1-2) unstable; urgency=low
   - Removing python-central
   - python-setuptools is mandatory at runtime. Closes: #536698.
   * Removed debian/dirs
+  * Replacing pip.xml by pip.1
 
- -- Carl Chenet <chaica@ohmytux.com>  Wed, 28 Oct 2009 00:09:50 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Tue, 03 Nov 2009 22:36:36 +0100
 
 python-pip (0.3.1-1) unstable; urgency=low
 

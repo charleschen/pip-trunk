@@ -4,8 +4,7 @@ Priority: optional
 Maintainer: Carl Chenet <chaica@ohmytux.com>
 Uploaders: Jeff Licquia <licquia@debian.org>, Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Homepage: http://pip.openplans.org/
-Build-Depends: debhelper (>= 7.0.50~), python-all-dev
-Build-Depends-Indep: python (>= 2.3.5-7), python-support, python-setuptools (>= 0.6c1), xsltproc, docbook-xsl
+Build-Depends: debhelper (>= 7.0.50~), python-all-dev, python (>= 2.3.5-7), python-support, python-setuptools (>= 0.6c1)
 Standards-Version: 3.8.3
 XS-Python-Version: all
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-pip/trunk/
@@ -13,9 +12,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk
 
 Package: python-pip
 Architecture: all
-Section: python
-Depends: ${python:Depends}, python-pkg-resources, python-setuptools (>= 0.6c1)
-XB-Python-Version: ${python:Versions}
+Depends: ${python:Depends}, ${misc:Depends}, python-pkg-resources, python-setuptools (>= 0.6c1)
 Description: Alternative Python package installer
  pip installs packages.  Python packages.  An easy_install replacement.
  .
