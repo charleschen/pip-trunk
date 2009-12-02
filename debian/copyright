@@ -1,9 +1,9 @@
-This package was debianized by Chenet Carl <chaica@ohmytux.com> on
-Tue, 05 May 2009 12:07:12 +0100.
+This package was debianized by Jeff Licquia <licquia@debian.org>.
 
 It was downloaded from http://pypi.python.org/pypi/pip
 
-Authors: The Open Planning Project <python-virtualenv@groups.google.com> 
+Upstream authors: The Open Planning Project
+<python-virtualenv@groups.google.com> 
 
   Permission  is  hereby  granted,  free  of  charge,  to  any  person
   obtaining a copy of this software and associated documentation files
@@ -25,8 +25,5 @@ Authors: The Open Planning Project <python-virtualenv@groups.google.com>
   CONNECTION WITH  THE SOFTWARE  OR THE USE  OR OTHER DEALINGS  IN THE
   SOFTWARE.
 
-The Debian packaging is © 2009, Chenet Carl <chaica@ohmytux.com> and
-is licensed under the GPL-3 or any later version.
-
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL-3'.
+The Debian packaging is © 2009, Jeff Licquia <licquia@debian.org> and is
+under the same license as the rest of pip.

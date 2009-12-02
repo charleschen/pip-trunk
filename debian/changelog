@@ -1,15 +1,22 @@
 python-pip (0.5.1-1) unstable; urgency=low
 
   * New upstream release
+  * Switched from python-central to python-support
   * Using dh7 + rules.tiny
   * Clearer debian/copyright
   * debian/control
-  - Removing python-central
-  - python-setuptools is mandatory at runtime. Closes: #536698.
+    - Maintainer is now the DPMT team
+    - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
+    - Removing python-central
+    - python-setuptools is mandatory at runtime
+      Added it in Depends field: Closes: #536698
+    - Removing the first line of the long description
   * Removed debian/dirs
   * Replacing pip.xml by pip.1
+  * debian/watch
+    - Removed useless comments 
 
- -- Carl Chenet <chaica@ohmytux.com>  Tue, 03 Nov 2009 22:36:36 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Wed, 02 Dec 2009 21:23:36 +0100
 
 python-pip (0.3.1-1) unstable; urgency=low
 
