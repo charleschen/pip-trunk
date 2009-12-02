@@ -1,9 +1,8 @@
-python-pip (0.5.1-1) unstable; urgency=low
+python-pip (0.6.1-1) unstable; urgency=low
 
   * New upstream release
   * Switched from python-central to python-support
   * Using dh7 + rules.tiny
-  * Clearer debian/copyright
   * debian/control
     - Maintainer is now the DPMT team
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
@@ -16,7 +15,7 @@ python-pip (0.5.1-1) unstable; urgency=low
   * debian/watch
     - Removed useless comments 
 
- -- Carl Chenet <chaica@ohmytux.com>  Wed, 02 Dec 2009 21:23:36 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Thu, 03 Dec 2009 00:15:07 +0100
 
 python-pip (0.3.1-1) unstable; urgency=low
 
