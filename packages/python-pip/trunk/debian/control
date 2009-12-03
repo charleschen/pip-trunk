@@ -13,7 +13,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk
 Package: python-pip
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, python-pkg-resources, python-setuptools (>= 0.6c1)
-Description: Alternative Python package installer
+Description: alternative Python package installer
  pip is a replacement for easy_install, and is intended to be an improved
  Python package installer.  It integrates with virtualenv, doesn't do partial
  installs, can save package state for replaying, can install from non-egg
