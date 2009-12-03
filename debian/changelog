@@ -1,5 +1,6 @@
 python-pip (0.6.1-1) unstable; urgency=low
 
+  [ Carl Chenet ]
   * New upstream release
   * Switched from python-central to python-support
   * Using dh7 + rules.tiny
@@ -13,6 +14,10 @@ python-pip (0.6.1-1) unstable; urgency=low
   * Replacing pip.xml by pip.1
   * debian/watch
     - Removed useless comments 
+
+  [ Sandro Tosi ]
+  * debian/control
+    - removed python-all-dev from b-d, not needed
 
  -- Carl Chenet <chaica@ohmytux.com>  Thu, 03 Dec 2009 00:15:07 +0100
 
