@@ -6,7 +6,6 @@ python-pip (0.6.1-1) unstable; urgency=low
   * debian/control
     - Maintainer is now the DPMT team
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
-    - Removing python-central
     - python-setuptools is mandatory at runtime
       Added it in Depends field: Closes: #536698
     - Removing the first line of the long description
