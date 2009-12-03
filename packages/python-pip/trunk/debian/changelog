@@ -10,6 +10,7 @@ python-pip (0.6.1-1) unstable; urgency=low
     - python-setuptools is mandatory at runtime
       Added it in Depends field: Closes: #536698
     - Removing the first line of the long description
+    - bump Standards-Version to 3.8.3 (no changes needed)
   * Removed debian/dirs
   * Replacing pip.xml by pip.1
   * debian/watch
