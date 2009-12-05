@@ -1,26 +1,33 @@
 python-pip (0.6.1-1) unstable; urgency=low
 
   [ Carl Chenet ]
-  * New upstream release
+  * New upstream release. Closes: #546049
   * Switched from python-central to python-support
+    Closes: #556852
   * Using dh7 + rules.tiny
   * debian/control
+    - Added Build-Depends-Indep field
+    - Switched Build-Depends-Indep: python to
+      Build-Depends-Indep: python-all
     - Maintainer is now the DPMT team
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
+    - Put Jeff Licquia <licquia@debian.org> in Uploaders
     - python-setuptools is mandatory at runtime
-      Added it in Depends field: Closes: #536698
+      Added it in Depends field: Closes: #536698, #546432
     - Removing the first line of the long description
     - bump Standards-Version to 3.8.3 (no changes needed)
   * Removed debian/dirs
   * Replacing pip.xml by pip.1
   * debian/watch
     - Removed useless comments 
+  * debian/rules
+    - Added an override for the upstream changelog
 
   [ Sandro Tosi ]
   * debian/control
     - removed python-all-dev from b-d, not needed
 
- -- Carl Chenet <chaica@ohmytux.com>  Thu, 03 Dec 2009 00:15:07 +0100
+ -- Carl Chenet <chaica@ohmytux.com>  Sat, 05 Dec 2009 14:17:18 +0100
 
 python-pip (0.3.1-1) unstable; urgency=low
 
