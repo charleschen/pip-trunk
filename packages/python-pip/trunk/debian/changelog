@@ -27,7 +27,17 @@ python-pip (0.6.1-1) unstable; urgency=low
   * debian/control
     - removed python-all-dev from b-d, not needed
 
- -- Carl Chenet <chaica@ohmytux.com>  Sat, 05 Dec 2009 14:17:18 +0100
+  [ Kumar Appaiah ]
+  * Integrate NMU changelog entry.
+
+ -- Kumar Appaiah <akumar@debian.org>  Wed, 09 Dec 2009 17:50:50 -0600
+
+python-pip (0.3.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add Jakub Wilk's patch to fix FTBFS with Python 2.6 (Closes: #556852)
+
+ -- Kumar Appaiah <akumar@debian.org>  Tue, 08 Dec 2009 18:41:05 -0600
 
 python-pip (0.3.1-1) unstable; urgency=low
 
