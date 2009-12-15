@@ -7,8 +7,11 @@ python-pip (0.6.1-1) unstable; urgency=low
   * Using dh7 + rules.tiny
   * debian/control
     - Added Build-Depends-Indep field
-    - Switched Build-Depends-Indep: python to
-      Build-Depends-Indep: python-all
+    - Switched Vcs-Bzr to Vcs-Svn
+    - Switched Vcs-Browser to DPMT SVN url.
+    - Removed python-all-dev from b-d. Not needed.
+    - Removed xsltproc and docbook-xsl from b-d-i. Not needed anymore.
+      We use a static debian/pip.1
     - Maintainer is now the DPMT team
     - Put Carl Chenet <chaica@ohmytux.com> in Uploaders
     - Put Jeff Licquia <licquia@debian.org> in Uploaders
@@ -23,14 +26,14 @@ python-pip (0.6.1-1) unstable; urgency=low
   * debian/rules
     - Added an override for the upstream changelog
 
+  [ Kumar Appaiah ]
+  * Integrate NMU changelog entry.
+
   [ Sandro Tosi ]
   * debian/control
     - removed python-all-dev from b-d, not needed
 
-  [ Kumar Appaiah ]
-  * Integrate NMU changelog entry.
-
- -- Kumar Appaiah <akumar@debian.org>  Wed, 09 Dec 2009 17:50:50 -0600
+ -- Carl Chenet <chaica@ohmytux.com>  Tue, 15 Dec 2009 02:07:56 +0100
 
 python-pip (0.3.1-1.1) unstable; urgency=low
 
