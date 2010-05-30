@@ -1,3 +1,16 @@
+python-pip (0.7.2-1) unstable; urgency=low
+
+  * New upstream version. 
+  * renamed python-pip.manpages to manpages
+  * debian/control
+    - removed unneeded python in Build-Depends
+    - bump Standards-Version to 3.8.4 (no changes needed)
+    - switched XS-Python-Version to >= 2.5
+  * debian/pip.1
+    - added uninstall and search sections
+
+ -- Carl Chenet <chaica@ohmytux.com>  Sun, 30 May 2010 02:17:14 +0200
+
 python-pip (0.6.1-1) unstable; urgency=low
 
   [ Carl Chenet ]
