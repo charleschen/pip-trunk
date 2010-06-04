@@ -1,17 +1,20 @@
 python-pip (0.7.2-1) unstable; urgency=low
 
-  * New upstream version. 
+  * New upstream version
+  * Added debian/install
   * debian/source/format
     - bump to 3.0 (quilt)
   * renamed python-pip.manpages to manpages
   * debian/control
-    - removed unneeded python in Build-Depends
     - bump Standards-Version to 3.8.4 (no changes needed)
-    - switched XS-Python-Version to >= 2.5
+    - switched XS-Python-Version to all
+    - removed python-setuptools in Build-Depends 
+  * debian/rules
+    - overriding dh_auto_install to install with install file
   * debian/pip.1
     - added uninstall and search sections
 
- -- Carl Chenet <chaica@ohmytux.com>  Sun, 30 May 2010 02:43:25 +0200
+ -- Carl Chenet <chaica@ohmytux.com>  Fri, 04 Jun 2010 02:02:44 +0200
 
 python-pip (0.6.1-1) unstable; urgency=low
 
