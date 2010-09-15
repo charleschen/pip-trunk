@@ -5,9 +5,9 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
 Uploaders: Carl Chenet <chaica@ohmytux.com>, Jeff Licquia <licquia@debian.org>
 Homepage: http://pip.openplans.org/
 Build-Depends: debhelper (>= 7.0.50~), python
-Build-Depends-Indep: python-support (>= 1.0.0)
-Standards-Version: 3.8.4
-XS-Python-Version: all
+Build-Depends-Indep: python-support (>= 1.0.0), python-setuptools (>= 0.6c1)
+Standards-Version: 3.9.1
+XS-Python-Version: >= 2.5
 Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-pip/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk/
 
