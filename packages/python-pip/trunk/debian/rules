@@ -1,15 +1,6 @@
 #!/usr/bin/make -f
+export DH_ALWAYS_EXCLUDE=pip-2.5:pip-2.6
+
 %:
 	dh $@
 
-override_dh_auto_clean:
-
-override_dh_auto_build:
-
-override_dh_auto_install:
-
-override_dh_install:
-	dh_install
-
-override_dh_link:
-	dh_link usr/share/pyshared/pip/__init__.py usr/bin/pip

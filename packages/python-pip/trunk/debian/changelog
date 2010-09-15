@@ -1,3 +1,23 @@
+python-pip (0.8.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Added debian/patches/
+  * Added debian/patches/series
+  * Added debian/patches/format_egg_string
+  * debian/patches/format_egg_string
+    - use the same egg string format than Debian python-setuptools
+      Closes: #562544 
+  * debian/control
+    - bump Standards-Version to 3.9.1. No changes needed.
+    - added python-setuptools to Build-Depends-Indep
+    - switched XS-Python-Version to >= 2.5
+  * debian/rules
+    - added export DH_ALWAYS_EXCLUDE=pip-2.5:pip-2.6
+      to remove unwanted generated files
+    - removing overrides
+
+ -- Carl Chenet <chaica@ohmytux.com>  Wed, 15 Sep 2010 02:09:57 +0200
+
 python-pip (0.7.2-1) unstable; urgency=low
 
   * New upstream version
