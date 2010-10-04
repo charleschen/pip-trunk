@@ -1,9 +1,6 @@
 python-pip (0.8.1-1) unstable; urgency=low
 
   * New upstream version
-  * Added debian/patches/
-  * Added debian/patches/series
-  * Added debian/patches/format_egg_string
   * debian/patches/format_egg_string
     - use the same egg string format than Debian python-setuptools
       Closes: #562544 
@@ -16,7 +13,7 @@ python-pip (0.8.1-1) unstable; urgency=low
       to remove unwanted generated files
     - removing overrides
 
- -- Carl Chenet <chaica@ohmytux.com>  Wed, 15 Sep 2010 02:09:57 +0200
+ -- Carl Chenet <chaica@ohmytux.com>  Tue, 05 Oct 2010 01:44:06 +0200
 
 python-pip (0.7.2-1) unstable; urgency=low
 
