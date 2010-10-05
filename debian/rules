@@ -1,5 +1,4 @@
 #!/usr/bin/make -f
-export DH_ALWAYS_EXCLUDE=pip-2.5:pip-2.6
 
 %:
 	dh $@
