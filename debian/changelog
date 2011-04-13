@@ -1,3 +1,21 @@
+python-pip (1.0-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control
+    - Remove python-support from Build-Depends-Indep
+    - Bump python to 2.6.6-3
+    - Bump Standards-Version to 3.9.1
+  * debian/patches
+    - Replaced remove_hardcoded_python_version by
+      remove_hardcoded_python_version.patch
+    - Replaced format_egg_string by format_egg_string.patch
+  * debian/rules
+    - Added --with python2 to dh $@
+  * debian/copyright
+    - updated copyright dates and authors
+
+ -- Carl Chenet <chaica@ohmytux.com>  Wed, 13 Apr 2011 04:12:53 +0200
+
 python-pip (0.8.1-1) unstable; urgency=low
 
   * New upstream version
