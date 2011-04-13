@@ -2,10 +2,51 @@ Original source may be found at: http://pip.openplans.org/
 Files: debian/*
 Copyright: Copyright 2009 Jeff Licquia <licquia@debian.org>
 License: other
-    The Debian packaging informatin is licensed under the same license
+    The Debian packaging information is licensed under the same license
     as the rest of pip.
+
 Files: *
-Copyright: Copyright (c) 2007 Ian Bicking and Contributors
+Copyright: Copyright © 2008-2011 The pip developers
+
+pip developers are:
+Alex Grönholm
+Alex Morega
+Alexandre Conrad
+Armin Ronacher
+Brian Rosner
+Carl Meyer
+Christian Oudard
+Cody Soyland
+Daniel Holth
+Dave Abrahams
+Francesco
+Hugo Lopes Tavares
+Ian Bicking
+Igor Sobreira
+Ionel Maries Cristian
+Jakub Vysoky
+Jannis Leidel
+Jay Graves
+John-Scott Atlakson
+Jon Parise
+Josh Bronson
+Kelsey Hightower
+Kenneth Belitzky
+Kumar McMillan
+Luke Macken
+Masklinn
+Nowell Strite
+Oliver Tonnhofer
+Patrick Jenkins
+Paul Nasrat
+Peter Waller
+Ronny Pfannschmidt
+Simon Cross
+Thomas Johansson
+Vinay Sajip
+Vitaly Babiy
+Wil Tan
+
 License: other
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
