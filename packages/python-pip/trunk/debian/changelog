@@ -1,3 +1,25 @@
+python-pip (1.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #632578,#633610,#653049)
+  * debian/control
+    - Add python3-pip binary package section
+    - Add python3 in B-D
+    - Add python3-pkg-resources and python3-setuptools in Depends
+    - Bump Standards-Version to 3.9.3
+    - Add X-Python3-Version field
+    - add python-dev, python3-dev and build-essential in Recommends
+      in order to be able to install C extensions (Closes: #633974)
+  * Add python-pip.manpages and python3-pip.manpages
+  * Update the pip.1 manpage
+  * Add the pip-2.7.1 and pip.3.2.1 manpages
+  * Add python-pip.links to link to pip exe name only for python2
+  * debian/patches
+    - Modify remove_hardcoded_python_version.patch to generate pip-X.Y binaries
+  * debian/rules
+    - Add with python3 to dh 
+
+ -- Carl Chenet <chaica@debian.org>  Sun, 27 May 2012 04:14:03 +0200
+
 python-pip (1.0-1) unstable; urgency=low
 
   * New upstream version
