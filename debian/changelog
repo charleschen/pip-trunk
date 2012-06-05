@@ -1,3 +1,15 @@
+python-pip (1.1-2) unstable; urgency=low
+
+  * debian/control
+    - Use X-Python-Version >= 2.6 (Closes: #676041)
+    - Put python-all (>= 2.6) in B-D and Depends field
+    - Put python-all-dev (>= 2.6) in python-pip pkg Depends field
+  * Add pip-2.6 manpage
+  * debian/python-pip.install
+    - add support for multiple 2.x libraries
+
+ -- Carl Chenet <chaica@debian.org>  Tue, 05 Jun 2012 23:03:13 +0200
+
 python-pip (1.1-1) unstable; urgency=low
 
   * New upstream version (Closes: #632578,#633610,#653049)
