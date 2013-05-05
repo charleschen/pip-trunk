@@ -9,8 +9,8 @@ Build-Depends-Indep: python-setuptools (>= 0.6c1), python3-setuptools
 Standards-Version: 3.9.3
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
-Vcs-Svn: svn://svn.debian.org/svn/python-modules/packages/python-pip/trunk/
-Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/python-pip/trunk/
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-pip/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-pip/trunk/
 
 Package: python-pip
 Architecture: all
