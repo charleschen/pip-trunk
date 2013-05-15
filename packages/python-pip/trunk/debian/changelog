@@ -1,6 +1,13 @@
 python-pip (1.1-4) UNRELEASED; urgency=low
 
+  * Team upload.
+
+  [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
+
+  [ Dmitrijs Ledkovs ]
+  * Build depend on python3-all, fixes FTBFS against multiple supported
+    python3 versions (closes: #692384).
 
  -- Jakub Wilk <jwilk@debian.org>  Sun, 05 May 2013 16:03:05 +0200
 
