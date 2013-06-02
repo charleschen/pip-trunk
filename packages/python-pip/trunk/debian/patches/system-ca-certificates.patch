@@ -1,0 +1,39 @@
+Description: Get CA certificates from the Debian ca-certificates package
+Forwarded: not-needed
+Author: Stefano Rivera <stefanor@debian.org>
+
+--- a/pip/locations.py
++++ b/pip/locations.py
+@@ -8,7 +8,7 @@
+ from pip.backwardcompat import get_python_lib
+ import pip.exceptions
+ 
+-default_cert_path = os.path.join(os.path.dirname(__file__), 'cacert.pem')
++default_cert_path = '/etc/ssl/certs/ca-certificates.crt'
+ 
+ def running_under_virtualenv():
+     """
+--- a/setup.py
++++ b/setup.py
+@@ -50,7 +50,6 @@
+       url='http://www.pip-installer.org',
+       license='MIT',
+       packages=['pip', 'pip.commands', 'pip.vcs', 'pip.backwardcompat'],
+-      package_data={'pip': ['*.pem']},
+       entry_points=dict(console_scripts=['pip-%s=pip:main' % sys.version[:3]]),
+       test_suite='nose.collector',
+       tests_require=tests_require,
+--- a/pip/download.py
++++ b/pip/download.py
+@@ -96,6 +96,11 @@
+ 
+         # get alternate bundle or use our included bundle
+         cert_path = os.environ.get('PIP_CERT', '') or default_cert_path
++        if (cert_path == default_cert_path
++                and not os.path.exists(default_cert_path)):
++            logger.fatal('No CA bundle available. '
++                         'Install the Debian "ca-certificates" package to '
++                         'allow pip to use https.')
+ 
+         self.sock = ssl.wrap_socket(sock,
+                                 self.key_file,
