@@ -1,53 +1,96 @@
-Original source may be found at: http://pip.openplans.org/
-Files: debian/*
-Copyright: Copyright 2009 Jeff Licquia <licquia@debian.org>
-License: other
-    The Debian packaging information is licensed under the same license
-    as the rest of pip.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: http://www.pip-installer.org/
 
 Files: *
-Copyright: Copyright © 2008-2011 The pip developers
+Copyright: Copyright © 2008-2013 The pip developers:
+    Alex Grönholm
+    Alex Morega
+    Alexandre Conrad
+    Andrey Bulgakov
+    Antti Kaihola
+    Armin Ronacher
+    Aziz Köksal
+    Ben Rosser
+    Brian Rosner
+    Carl Meyer
+    Chris McDonough
+    Christian Oudard
+    Clay McClure
+    Cody Soyland
+    Daniel Holth
+    Dave Abrahams
+    David (d1b)
+    Dmitry Gladkov
+    Donald Stufft
+    Francesco
+    Geoffrey Lehée
+    Georgi Valkov
+    Hugo Lopes Tavares
+    Ian Bicking
+    Igor Sobreira
+    Ionel Maries Cristian
+    Jakub Vysoky
+    James Cleveland
+    Jannis Leidel
+    Jay Graves
+    John-Scott Atlakson
+    Jon Parise
+    Jonas Nockert
+    Josh Bronson
+    Kamal Bin Mustafa
+    Kelsey Hightower
+    Kenneth Belitzky
+    Kumar McMillan
+    Luke Macken
+    Masklinn
+    Marc Abramowitz
+    Marcus Smith
+    Markus Hametner
+    Matt Maker
+    Maxime R.
+    Miguel Araujo
+    Nick Stenning
+    Nowell Strite
+    Oliver Tonnhofer
+    Olivier Girardot
+    Patrick Jenkins
+    Paul Moore
+    Paul Nasrat
+    Paul Oswald
+    Paul van der Linden
+    Peter Waller
+    Phil Whelan
+    Piet Delport
+    Przemek Wrzos
+    Qiangning Hong
+    Rafael Caricio
+    Rene Dudfield
+    Roey Berman
+    Ronny Pfannschmidt
+    Rory McCann
+    Simon Cross
+    Stavros Korokithakis
+    Thomas Fenzl
+    Thomas Johansson
+    Vinay Sajip
+    Vitaly Babiy
+    W Trevor King
+    Wil Tan
+    Hsiaoming Yang
+License: Expat
 
-pip developers are:
-Alex Grönholm
-Alex Morega
-Alexandre Conrad
-Armin Ronacher
-Brian Rosner
-Carl Meyer
-Christian Oudard
-Cody Soyland
-Daniel Holth
-Dave Abrahams
-Francesco
-Hugo Lopes Tavares
-Ian Bicking
-Igor Sobreira
-Ionel Maries Cristian
-Jakub Vysoky
-Jannis Leidel
-Jay Graves
-John-Scott Atlakson
-Jon Parise
-Josh Bronson
-Kelsey Hightower
-Kenneth Belitzky
-Kumar McMillan
-Luke Macken
-Masklinn
-Nowell Strite
-Oliver Tonnhofer
-Patrick Jenkins
-Paul Nasrat
-Peter Waller
-Ronny Pfannschmidt
-Simon Cross
-Thomas Johansson
-Vinay Sajip
-Vitaly Babiy
-Wil Tan
+Files: pip/cacert.pem
+Copyright: No copyrightable material
+License: public-domain
+    Upstream declares that this bundle is licensed, but it seems unreasonable
+    to think that CA certificates would be protected by copyright.
+    Forwarded: https://github.com/pypa/pip/pull/971
 
-License: other
+Files: debian/*
+Copyright: Copyright 2009 Jeff Licquia <licquia@debian.org>
+License: Expat
+
+License: Expat
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
     "Software"), to deal in the Software without restriction, including
@@ -66,4 +109,3 @@ License: other
     LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
     OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-

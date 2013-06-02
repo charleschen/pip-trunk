@@ -1,17 +1,33 @@
-python-pip (1.1-4) UNRELEASED; urgency=low
+python-pip (1.3.1-1) UNRELEASED; urgency=low
 
+  [ Stefano Rivera ]
   * Team upload.
+  * New upstream release.
+    - pip now performs SSL certificate validation.
+      CVE-2013-1629 (Closes: #710163)
+  * Refresh patches.
+  * Drop test_urlparse_uses_fragment.patch - superseded upstream.
+  * Switch debian/watch to use https.
+  * Updated Homepage.
+  * Install the upstream changelog (Closes: #710134)
+  * debian/copyright:
+    - Update authors and years.
+    - The pip license is Expat.
+    - Reformat as valid machine-readable copyright format 1.0.
+    - Add pip/cacert.pem.
+  * debian/patches/system-ca-certificates.patch: Use the CA bundle provided by
+    ca-certificates.
 
   [ Jakub Wilk ]
   * Use canonical URIs for Vcs-* fields.
 
   [ Dmitrijs Ledkovs ]
   * Build depend on python3-all, fixes FTBFS against multiple supported
-    python3 versions (closes: #692384).
+    python3 versions (Closes: #692384).
 
   [ Dmitry Shachnev ]
   * Rebuild without python2.6, and drop the manpage for pip-2.6
-    (closes: #679196).
+    (Closes: #679196).
 
  -- Jakub Wilk <jwilk@debian.org>  Sun, 05 May 2013 16:03:05 +0200
 
