@@ -1,0 +1,18 @@
+Description: Don't install Python version specific endpoints from setup.py
+ We'll do them ourselves in the packaging, so that they'll have the correct
+ shebangs.
+ This also ensures that we will support multiple Python3 versions, where the
+ entry-points.txt came from only one of the versions.
+Author: Stefano Rivera <stefanor@debian.org>
+
+--- a/setup.py
++++ b/setup.py
+@@ -50,7 +50,7 @@
+       url='http://www.pip-installer.org',
+       license='MIT',
+       packages=['pip', 'pip.commands', 'pip.vcs', 'pip.backwardcompat'],
+-      entry_points=dict(console_scripts=['pip=pip:main', 'pip-%s=pip:main' % sys.version[:3]]),
++      entry_points=dict(console_scripts=['pip=pip:main']),
+       test_suite='nose.collector',
+       tests_require=tests_require,
+       zip_safe=False,

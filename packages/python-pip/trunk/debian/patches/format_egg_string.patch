@@ -1,5 +1,6 @@
-# Description: use the same .egg string format than Debian python-setuptools
-# Author: Carl Chenet <chaica@ohmytux.com>
+Description: use the same .egg string format than Debian python-setuptools
+Author: Carl Chenet <chaica@ohmytux.com>
+Bug-Debian: http://bugs.debian.org/562544
 
 --- a/pip/req.py
 +++ b/pip/req.py
