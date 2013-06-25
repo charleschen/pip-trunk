@@ -2,7 +2,6 @@
 
 PYTHON2=$(shell pyversions -vr)
 PYTHON3=$(shell py3versions -vr)
-PYTHON3_DEF=$(shell py3versions -vd)
 
 %:
 	dh $@ --with python2,python3
@@ -19,13 +18,10 @@ override_dh_auto_install:
 		python$$py setup.py install --skip-build \
 		                            --root=$(CURDIR)/debian/tmp \
 		                            --install-layout=deb; \
-		cp debian/tmp/usr/bin/pip debian/tmp/usr/bin/pip-$$py; \
 	done
+	sed -i "1 s/python3.[0-9]*/python3/" debian/tmp/usr/bin/pip3
+	cp debian/pip.1 build/pip3.1
 	dh_auto_install
-	set -ex; for py in $(PYTHON2) ; do \
-		sed "1 s/python$$/python$$py/" debian/tmp/usr/bin/pip \
-		    > debian/tmp/usr/bin/pip-$$py; \
-	done
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -34,19 +30,3 @@ override_dh_auto_clean:
 
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES.txt
-
-override_dh_installman:
-	cp debian/pip.1 build/pip-$(PYTHON3_DEF).1
-	dh_installman -p python-pip debian/pip.1
-	dh_installman -p python3-pip build/pip-$(PYTHON3_DEF).1
-
-override_dh_compress:
-	dh_compress
-	set -ex; for py in $(PYTHON2); do \
-		dh_link -p python-pip /usr/share/man/man1/pip.1.gz \
-		                      /usr/share/man/man1/pip-$$py.1.gz; \
-	done
-	set -ex; for py in $(filter-out $(PYTHON3_DEF),$(PYTHON3)); do \
-		dh_link -p python3-pip /usr/share/man/man1/pip-$(PYTHON3_DEF).1.gz \
-		                       /usr/share/man/man1/pip-$$py.1.gz; \
-	done

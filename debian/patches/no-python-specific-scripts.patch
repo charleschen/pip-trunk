@@ -1,8 +1,6 @@
-Description: Don't install Python version specific endpoints from setup.py
- We'll do them ourselves in the packaging, so that they'll have the correct
- shebangs.
- This also ensures that we will support multiple Python3 versions, where the
- entry-points.txt came from only one of the versions.
+Description: Don't install Python minor version specific endpoints
+Forwarded: https://github.com/pypa/pip/pull/976
+Bug-Upstream: https://github.com/pypa/pip/issues/943
 Author: Stefano Rivera <stefanor@debian.org>
 
 --- a/setup.py
@@ -12,7 +10,7 @@ Author: Stefano Rivera <stefanor@debian.org>
        license='MIT',
        packages=['pip', 'pip.commands', 'pip.vcs', 'pip.backwardcompat'],
 -      entry_points=dict(console_scripts=['pip=pip:main', 'pip-%s=pip:main' % sys.version[:3]]),
-+      entry_points=dict(console_scripts=['pip=pip:main']),
++      entry_points=dict(console_scripts=['pip=pip:main', 'pip%i=pip:main' % sys.version_info[0]]),
        test_suite='nose.collector',
        tests_require=tests_require,
        zip_safe=False,
