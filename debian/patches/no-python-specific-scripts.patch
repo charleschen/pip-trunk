@@ -8,7 +8,7 @@ Author: Stefano Rivera <stefanor@debian.org>
 @@ -50,7 +50,7 @@
        url='http://www.pip-installer.org',
        license='MIT',
-       packages=['pip', 'pip.commands', 'pip.vcs', 'pip.backwardcompat'],
+       packages=find_packages(exclude=["contrib", "docs", "tests*"]),
 -      entry_points=dict(console_scripts=['pip=pip:main', 'pip-%s=pip:main' % sys.version[:3]]),
 +      entry_points=dict(console_scripts=['pip=pip:main', 'pip%i=pip:main' % sys.version_info[0]]),
        test_suite='nose.collector',
