@@ -1,4 +1,4 @@
-python-pip (1.4.1-1) UNRELEASED; urgency=low
+python-pip (1.4.1-1) unstable; urgency=low
 
   * Team upload.
   * New upstream release.
@@ -8,7 +8,7 @@ python-pip (1.4.1-1) UNRELEASED; urgency=low
     - d/patches/format_egg_string.patch: Refreshed.
     - d/patches/system-ca-certificates.patch: Refreshed.
 
- -- Barry Warsaw <barry@debian.org>  Mon, 19 Aug 2013 17:17:24 -0400
+ -- Barry Warsaw <barry@debian.org>  Mon, 19 Aug 2013 18:33:23 -0400
 
 python-pip (1.3.1-1) unstable; urgency=low
 
