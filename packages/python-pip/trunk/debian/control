@@ -6,7 +6,7 @@ Uploaders: Carl Chenet <chaica@debian.org>, Jeff Licquia <licquia@debian.org>
 Homepage: http://www.pip-installer.org/
 Build-Depends: debhelper (>= 7.0.50~), python-all (>= 2.6), python3-all (>= 3.2)
 Build-Depends-Indep: python-setuptools (>= 0.6c1), python3-setuptools
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-pip/trunk/
