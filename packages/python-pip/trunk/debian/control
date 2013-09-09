@@ -14,8 +14,12 @@ Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-pip
 
 Package: python-pip
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-pkg-resources, python-setuptools (>= 0.6c1)
-Recommends: python-dev-all (>= 2.6), build-essential, ca-certificates
+Depends: ca-certificates,
+         python-pkg-resources,
+         python-setuptools (>= 0.6c1),
+         ${misc:Depends},
+         ${python:Depends}
+Recommends: build-essential, python-dev-all (>= 2.6)
 Description: alternative Python package installer
  pip is a replacement for easy_install, and is intended to be an improved
  Python package installer.  It integrates with virtualenv, doesn't do partial
@@ -24,8 +28,12 @@ Description: alternative Python package installer
 
 Package: python3-pip
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}, python3-pkg-resources, python3-setuptools
-Recommends: python3-dev (>= 3.2), build-essential, ca-certificates
+Depends: ca-certificates,
+         python3-pkg-resources,
+         python3-setuptools,
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: build-essential, python3-dev (>= 3.2)
 Description: alternative Python package installer - Python 3 version of the package
  pip is a replacement for easy_install, and is intended to be an improved
  Python package installer.  It integrates with virtualenv, doesn't do partial
