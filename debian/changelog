@@ -1,3 +1,16 @@
+python-pip (1.4.1-2) unstable; urgency=low
+
+  * Team upload.
+  * d/control: 
+    - Move ca-certificates from Recommends to Depends since
+      certificate checks are now turned on by default.  Without this,
+      default usage of pip will just error with an informative message
+      telling you to install ca-certificates anyway.  (Closes: #722295)
+    - wrap-and-sort
+  * d/python{,3}-pip.install: wrap-and-sort
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 09 Sep 2013 18:26:28 -0400
+
 python-pip (1.4.1-1) unstable; urgency=low
 
   * Team upload.
