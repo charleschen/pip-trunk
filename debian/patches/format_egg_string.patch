@@ -4,7 +4,7 @@ Bug-Debian: http://bugs.debian.org/562544
 
 --- a/pip/req.py
 +++ b/pip/req.py
-@@ -443,7 +443,7 @@
+@@ -508,7 +508,7 @@
          paths_to_remove = UninstallPathSet(dist)
  
          pip_egg_info_path = os.path.join(dist.location,

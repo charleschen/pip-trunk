@@ -4,9 +4,11 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Carl Chenet <chaica@debian.org>, Jeff Licquia <licquia@debian.org>
 Homepage: http://www.pip-installer.org/
-Build-Depends: debhelper (>= 7.0.50~), python-all (>= 2.6), python3-all (>= 3.2)
+Build-Depends: debhelper (>= 7.0.50~),
+               python-all (>= 2.6),
+               python3-all (>= 3.2)
 Build-Depends-Indep: python-setuptools (>= 0.6c1), python3-setuptools
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/python-pip/trunk/
@@ -14,11 +16,16 @@ Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-pip
 
 Package: python-pip
 Architecture: all
-Depends: ca-certificates,
+Depends: ${misc:Depends},
+         ${python:Depends},
+         ca-certificates,
+         python-colorama,
+         python-distlib,
+         python-html5lib,
          python-pkg-resources,
          python-setuptools (>= 0.6c1),
-         ${misc:Depends},
-         ${python:Depends}
+         python-six,
+         python-requests,
 Recommends: build-essential, python-dev-all (>= 2.6)
 Description: alternative Python package installer
  pip is a replacement for easy_install, and is intended to be an improved
@@ -28,11 +35,16 @@ Description: alternative Python package installer
 
 Package: python3-pip
 Architecture: all
-Depends: ca-certificates,
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         ca-certificates,
+         python3-colorama,
+         python3-distlib,
+         python3-html5lib,
          python3-pkg-resources,
          python3-setuptools,
-         ${misc:Depends},
-         ${python3:Depends}
+         python3-six,
+         python3-requests,
 Recommends: build-essential, python3-dev (>= 3.2)
 Description: alternative Python package installer - Python 3 version of the package
  pip is a replacement for easy_install, and is intended to be an improved
