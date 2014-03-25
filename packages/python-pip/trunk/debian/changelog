@@ -1,3 +1,23 @@
+python-pip (1.5.4-1) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/patches:
+    - system-ca-certificates.patch: Removed.  This is obsoleted by the
+      vendorizing (and on Debian, de-vendorizing) of the requests library.
+    - no-python-specific-scripts.patch: Removed.  Upstream renamed pip-X.Y
+      to pipX.Y but adopts our pipX name as well.  I don't think it hurts
+      to also have pipX.Y.
+    - de-vendorize.patch: Added, in order to use Debian packages instead
+      of vendorized packages.
+  * d/control:
+    - Bump Standards-Version to 3.9.5 with no other changes needed.
+    - Update Depends for the vendorized packages.
+  * d/python{,3}-pip.pyremove: Remove pip/_vendor directory from binary
+    packages.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 25 Mar 2014 10:21:09 -0400
+
 python-pip (1.4.1-2) unstable; urgency=low
 
   * Team upload.

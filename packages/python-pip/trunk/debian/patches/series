@@ -1,3 +1,2 @@
 format_egg_string.patch
-system-ca-certificates.patch
-no-python-specific-scripts.patch
+de-vendorize.patch
