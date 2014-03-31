@@ -1,4 +1,4 @@
-python-pip (1.5.4-1) UNRELEASED; urgency=medium
+python-pip (1.5.4-1) unstable; urgency=medium
 
   * Team upload.
   * New upstream release.
@@ -16,7 +16,7 @@ python-pip (1.5.4-1) UNRELEASED; urgency=medium
   * d/python{,3}-pip.pyremove: Remove pip/_vendor directory from binary
     packages.
 
- -- Barry Warsaw <barry@debian.org>  Tue, 25 Mar 2014 10:21:09 -0400
+ -- Barry Warsaw <barry@debian.org>  Mon, 31 Mar 2014 14:44:40 -0400
 
 python-pip (1.4.1-2) unstable; urgency=low
 
