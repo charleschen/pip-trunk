@@ -1,32 +1,37 @@
 #!/usr/bin/make -f
 
-PYTHON2=$(shell pyversions -vr)
-PYTHON3=$(shell py3versions -vr)
+export PYBUILD_NAME=pip
+#export DH_VERBOSE=1
 
 %:
-	dh $@ --with python2,python3
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
 override_dh_auto_build:
+	rm -rf pip/_vendor
 	dh_auto_build
-	set -ex; for py in $(PYTHON3) ; do \
-		python$$py setup.py build; \
-	done
+
+override_dh_python3:
+	dh_python3
+	rm -f debian/python3-pip/usr/bin/pip
+	rm -f debian/python3-pip/usr/bin/pip3.?
+	rm -rf debian/python3-pip/usr/lib/python3*/dist-packages/pip-*.egg-info
+
+override_dh_python2:
+	dh_python2
+	rm -f debian/python-pip/usr/bin/pip2.?
 
 override_dh_auto_install:
-	# Build for python3 first so that /usr/bin/pip is python2
-	set -ex; for py in $(PYTHON3) ; do \
-		python$$py setup.py install --skip-build \
-		                            --root=$(CURDIR)/debian/tmp \
-		                            --install-layout=deb; \
-	done
-	sed -i "1 s/python3.[0-9]*/python3/" debian/tmp/usr/bin/pip3
-	cp debian/pip.1 build/pip3.1
+	cp debian/pip.1 debian/pip3.1
 	dh_auto_install
-
-override_dh_auto_clean:
-	dh_auto_clean
-	rm -rf build
-	rm -rf *.egg-info
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/python-wheels
+	python3 setup.py bdist_wheel \
+		--universal \
+		-d $(CURDIR)/debian/tmp/usr/share/python-wheels
 
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES.txt
+
+override_dh_clean:
+	dh_clean
+	rm -f debian/pip3.1
+	rm -rf debian/tmp/usr/share/python-wheels

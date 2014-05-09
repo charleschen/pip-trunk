@@ -1,3 +1,31 @@
+python-pip (1.5.4-2) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * d/patches/use-venv-wheels.patch:
+    - When inside a virtual environment, add to sys.path any wheels found
+      in <venv>/usr/share/python-wheels
+    - Adjust setup.py's test_requires since python-virtualenv is enough to
+      satisfy the requirement, but the tools aren't smart enough to know this.
+  * d/compat: Bump to version 8.
+  * d/control:
+    - Add python-pip-wheels binary package.
+    - Add to Build-Depends: python{,3}-mock, python{,3}-test,
+      python{,3}-scripttest, python-virtualenv, python3-wheel
+    - Update other Build-Depends.
+    - wrap-and-sort
+  * d/rules:
+    - Build and install the pip universal wheel.
+    - Use --build-system=pybuild.
+    - Remove unnecessary files here instead of in d/*.pyremove.
+  * d/python-pip-wheels.install: Added.
+  * d/python-pip.install: Removed.
+  * d/python-pip.pyremove: Removed.
+  * d/python3-pip.install: Removed.
+  * d/python3-pip.manpages: Updated.
+  * d/python3-pip.pyremove: Removed.
+
+ -- Barry Warsaw <barry@debian.org>  Fri, 09 May 2014 14:44:32 -0400
+
 python-pip (1.5.4-1) unstable; urgency=medium
 
   * Team upload.
