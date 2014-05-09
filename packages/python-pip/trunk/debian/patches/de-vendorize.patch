@@ -144,7 +144,7 @@ Forwarded: not-needed
            'pip%s=pip:main' % sys.version[:3]]),
 --- a/pip.egg-info/SOURCES.txt
 +++ b/pip.egg-info/SOURCES.txt
-@@ -49,186 +49,6 @@
+@@ -49,188 +49,6 @@
  pip.egg-info/not-zip-safe
  pip.egg-info/requires.txt
  pip.egg-info/top_level.txt
@@ -201,6 +201,8 @@ Forwarded: not-needed
 -pip/_vendor/html5lib/filters/whitespace.py
 -pip/_vendor/html5lib/serializer/__init__.py
 -pip/_vendor/html5lib/serializer/htmlserializer.py
+-pip/_vendor/html5lib/treeadapters/__init__.py
+-pip/_vendor/html5lib/treeadapters/sax.py
 -pip/_vendor/html5lib/treebuilders/__init__.py
 -pip/_vendor/html5lib/treebuilders/_base.py
 -pip/_vendor/html5lib/treebuilders/dom.py
@@ -331,7 +333,7 @@ Forwarded: not-needed
  pip/backwardcompat/__init__.py
  pip/commands/__init__.py
  pip/commands/bundle.py
-@@ -247,4 +67,4 @@
+@@ -249,4 +67,4 @@
  pip/vcs/bazaar.py
  pip/vcs/git.py
  pip/vcs/mercurial.py

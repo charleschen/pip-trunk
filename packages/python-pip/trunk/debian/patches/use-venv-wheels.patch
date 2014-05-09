@@ -7,7 +7,7 @@ Forwarded: not-needed
 
 --- a/pip/__init__.py
 +++ b/pip/__init__.py
-@@ -171,6 +171,24 @@
+@@ -171,6 +171,25 @@
      if initial_args is None:
          initial_args = sys.argv[1:]
  
@@ -15,7 +15,8 @@ Forwarded: not-needed
 +    # environment, we have to add all the devendorized wheels to sys.path from
 +    # inside the venv, otherwise the devendorized packages won't be found.
 +    # Only do this in a venv so it doesn't affect global pip operation.
-+    if sys.prefix != sys.base_prefix:
++    # Python 2 does not have a sys.base_prefix attribute.
++    if sys.prefix != getattr(sys, 'base_prefix', sys.prefix):
 +        wheel_dir = os.path.join(
 +            sys.base_prefix, 'usr', 'share', 'python-wheels')
 +        # We'll just add all the wheels we find.  When pyvenv initializes the
