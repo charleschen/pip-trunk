@@ -7,32 +7,33 @@ Forwarded: not-needed
 
 --- a/pip/__init__.py
 +++ b/pip/__init__.py
-@@ -171,6 +171,25 @@
-     if initial_args is None:
-         initial_args = sys.argv[1:]
+@@ -5,6 +5,26 @@
+ import sys
+ import re
  
-+    # Debian pyvenv support.  When inside a pyvenv created virtual
-+    # environment, we have to add all the devendorized wheels to sys.path from
-+    # inside the venv, otherwise the devendorized packages won't be found.
-+    # Only do this in a venv so it doesn't affect global pip operation.
-+    # Python 2 does not have a sys.base_prefix attribute.
-+    if sys.prefix != getattr(sys, 'base_prefix', sys.prefix):
-+        wheel_dir = os.path.join(
-+            sys.base_prefix, 'usr', 'share', 'python-wheels')
-+        # We'll just add all the wheels we find.  When pyvenv initializes the
-+        # venv by calling `$python -Im ensurepip`, it'll only copy the wheels
-+        # needed to make pip work.
-+        try:
-+            for filename in os.listdir(wheel_dir):
-+                if os.path.splitext(filename)[1] == '.whl':
-+                    sys.path.extend(os.path.join(wheel_dir, filename))
-+        except FileNotFoundError:
-+            # Oh well.
-+            pass
++# Debian pyvenv support.  When inside a pyvenv created virtual environment, we
++# have to add all the devendorized wheels to sys.path from inside the venv,
++# otherwise the devendorized packages won't be found.  Only do this in a venv
++# so it doesn't affect global pip operation.  Python 2 does not have a
++# sys.base_prefix attribute.
++if sys.prefix != getattr(sys, 'base_prefix', sys.prefix):
++    wheel_dir = os.path.join(sys.prefix, 'lib', 'python-wheels')
++    # We'll add all the wheels we find to the front of sys.path so that
++    # they're found first, even if the same dependencies are available in
++    # site-packages.  When pyvenv initializes the venv by calling `$python -Im
++    # ensurepip`, it'll only copy the wheels needed to make pip work into this
++    # directory, so we can just add them all.
++    try:
++        for filename in os.listdir(wheel_dir):
++            if os.path.splitext(filename)[1] == '.whl':
++                sys.path.insert(0, os.path.join(wheel_dir, filename))
++    except FileNotFoundError:
++        # Oh well.
++        pass
 +
-     autocomplete()
- 
-     try:
+ from pip.exceptions import InstallationError, CommandError, PipError
+ from pip.log import logger
+ from pip.util import get_installed_distributions, get_prog
 --- a/setup.py
 +++ b/setup.py
 @@ -41,7 +41,13 @@
