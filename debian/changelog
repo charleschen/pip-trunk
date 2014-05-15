@@ -1,4 +1,4 @@
-python-pip (1.5.5-1) UNRELEASED; urgency=medium
+python-pip (1.5.5-1) unstable; urgency=medium
 
   * Team upload.
   * New upstream release.
@@ -26,7 +26,7 @@ python-pip (1.5.5-1) UNRELEASED; urgency=medium
   * d/python3-pip.manpages: Updated.
   * d/python3-pip.pyremove: Removed.
 
- -- Barry Warsaw <barry@debian.org>  Fri, 09 May 2014 17:27:08 -0400
+ -- Barry Warsaw <barry@debian.org>  Thu, 15 May 2014 16:47:46 -0400
 
 python-pip (1.5.4-1) unstable; urgency=medium
 
