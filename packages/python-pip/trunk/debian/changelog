@@ -4,8 +4,8 @@ python-pip (1.5.5-1) UNRELEASED; urgency=medium
   * New upstream release.
   * d/patches/de-vendorize.patch: Refreshed.
   * d/patches/use-venv-wheels.patch:
-    - When inside a virtual environment, add to sys.path any wheels found
-      in <venv>/usr/share/python-wheels
+    - When inside a virtual environment, prepend to sys.path any wheels found
+      in <venv>/lib/python-wheels
     - Adjust setup.py's test_requires since python-virtualenv is enough to
       satisfy the requirement, but the tools aren't smart enough to know this.
   * d/compat: Bump to version 8.
