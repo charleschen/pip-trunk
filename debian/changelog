@@ -10,7 +10,7 @@ python-pip (1.5.5-1) unstable; urgency=medium
       satisfy the requirement, but the tools aren't smart enough to know this.
   * d/compat: Bump to version 8.
   * d/control:
-    - Add python-pip-wheels binary package.
+    - Add python-pip-whl binary package.
     - Add to Build-Depends: python{,3}-mock, python{,3}-test,
       python{,3}-scripttest, python-virtualenv, python3-wheel
     - Update other Build-Depends.
@@ -19,7 +19,7 @@ python-pip (1.5.5-1) unstable; urgency=medium
     - Build and install the pip universal wheel.
     - Use --build-system=pybuild.
     - Remove unnecessary files here instead of in d/*.pyremove.
-  * d/python-pip-wheels.install: Added.
+  * d/python-pip-whl.install: Added.
   * d/python-pip.install: Removed.
   * d/python-pip.pyremove: Removed.
   * d/python3-pip.install: Removed.
