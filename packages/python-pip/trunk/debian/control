@@ -64,7 +64,7 @@ Description: alternative Python package installer - Python 3 version of the pack
  .
  This is the Python 3 version of the package.
 
-Package: python-pip-wheels
+Package: python-pip-whl
 Architecture: all
 Depends: ${misc:Depends}
 Description: alternative Python package installer
