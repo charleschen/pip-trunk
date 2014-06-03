@@ -31,8 +31,8 @@ override_dh_installchangelogs:
 	dh_installchangelogs CHANGES.txt
 
 override_dh_installman:
-	rst2man pip-manpage.rst > debian/tmp/pip.man
-	rst2man pip-manpage.rst > debian/tmp/pip3.man
+	rst2man debian/pip-manpage.rst > debian/tmp/pip.man
+	rst2man debian/pip-manpage.rst > debian/tmp/pip3.man
 	dh_installman
 
 override_dh_clean:
