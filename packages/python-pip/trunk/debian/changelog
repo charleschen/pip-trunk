@@ -2,12 +2,18 @@ python-pip (1.5.6-1) UNRELEASED; urgency=medium
 
   * Team upload.
   * New upstream release.
-  * d/control: Update python-pip-whl dependencies.
+  * d/control:
+    - Update python-pip-whl dependencies
+    - Add python-docutils to Build-Depends
   * d/patches/de-vendorize.patch: Refreshed.
   * d/patches/use-venv-wheels.patch: Handle virtualenv created venvs.
   * d/pip.dependencies: Added.  (Closes: #749692)
   * d/python-pip-whl.install: Updated.
   * d/README.debian: Added.
+  * Updates to the pip manpage.
+    - Rewrote using reStructuredText
+    - Fleshed out with more options
+    - Removed pip.1
 
  -- Barry Warsaw <barry@debian.org>  Thu, 29 May 2014 18:48:06 -0400
 
