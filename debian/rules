@@ -21,7 +21,6 @@ override_dh_python2:
 	rm -f debian/python-pip/usr/bin/pip2.?
 
 override_dh_auto_install:
-	cp debian/pip.1 debian/pip3.1
 	dh_auto_install
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/python-wheels
 	python3 setup.py bdist_wheel \
@@ -31,7 +30,11 @@ override_dh_auto_install:
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGES.txt
 
+override_dh_installman:
+	rst2man pip-manpage.rst > debian/tmp/pip.man
+	rst2man pip-manpage.rst > debian/tmp/pip3.man
+	dh_installman
+
 override_dh_clean:
 	dh_clean
-	rm -f debian/pip3.1
 	rm -rf debian/tmp/usr/share/python-wheels
