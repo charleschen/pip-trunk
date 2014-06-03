@@ -1,10 +1,10 @@
-python-pip (1.5.6-1) UNRELEASED; urgency=medium
+python-pip (1.5.6-1) unstable; urgency=medium
 
   * Team upload.
   * New upstream release.
   * d/control:
-    - Update python-pip-whl dependencies
-    - Add python-docutils to Build-Depends
+    - Update python-pip-whl dependencies.
+    - Add python-docutils to Build-Depends.
     - Add python{,3}-wheel to Recommends in order to enable the `pip
       wheel` command.  (Closes: #733286)
   * d/patches
@@ -15,12 +15,12 @@ python-pip (1.5.6-1) UNRELEASED; urgency=medium
   * d/python-pip-whl.install: Updated.
   * d/README.debian: Added.
   * Updates to the pip manpage. (Closes: #687938)
-    - Rewrote using reStructuredText
-    - Fleshed out with more options
+    - Rewrote using reStructuredText.
+    - Fleshed out with more options.
     - Removed pip.1
     - Use pip-manpage.rst as the source for both pip and pip3 commands.
 
- -- Barry Warsaw <barry@debian.org>  Thu, 29 May 2014 18:48:06 -0400
+ -- Barry Warsaw <barry@debian.org>  Tue, 03 Jun 2014 18:56:01 -0400
 
 python-pip (1.5.5-1) unstable; urgency=medium
 
