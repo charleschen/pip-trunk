@@ -144,7 +144,7 @@ Forwarded: not-needed
            'pip%s=pip:main' % sys.version[:3]]),
 --- a/pip.egg-info/SOURCES.txt
 +++ b/pip.egg-info/SOURCES.txt
-@@ -49,188 +49,6 @@
+@@ -49,156 +49,6 @@
  pip.egg-info/not-zip-safe
  pip.egg-info/requires.txt
  pip.egg-info/top_level.txt
@@ -235,44 +235,6 @@ Forwarded: not-needed
 -pip/_vendor/requests/structures.py
 -pip/_vendor/requests/utils.py
 -pip/_vendor/requests/packages/__init__.py
--pip/_vendor/requests/packages/charade/__init__.py
--pip/_vendor/requests/packages/charade/__main__.py
--pip/_vendor/requests/packages/charade/big5freq.py
--pip/_vendor/requests/packages/charade/big5prober.py
--pip/_vendor/requests/packages/charade/chardistribution.py
--pip/_vendor/requests/packages/charade/charsetgroupprober.py
--pip/_vendor/requests/packages/charade/charsetprober.py
--pip/_vendor/requests/packages/charade/codingstatemachine.py
--pip/_vendor/requests/packages/charade/compat.py
--pip/_vendor/requests/packages/charade/constants.py
--pip/_vendor/requests/packages/charade/cp949prober.py
--pip/_vendor/requests/packages/charade/escprober.py
--pip/_vendor/requests/packages/charade/escsm.py
--pip/_vendor/requests/packages/charade/eucjpprober.py
--pip/_vendor/requests/packages/charade/euckrfreq.py
--pip/_vendor/requests/packages/charade/euckrprober.py
--pip/_vendor/requests/packages/charade/euctwfreq.py
--pip/_vendor/requests/packages/charade/euctwprober.py
--pip/_vendor/requests/packages/charade/gb2312freq.py
--pip/_vendor/requests/packages/charade/gb2312prober.py
--pip/_vendor/requests/packages/charade/hebrewprober.py
--pip/_vendor/requests/packages/charade/jisfreq.py
--pip/_vendor/requests/packages/charade/jpcntx.py
--pip/_vendor/requests/packages/charade/langbulgarianmodel.py
--pip/_vendor/requests/packages/charade/langcyrillicmodel.py
--pip/_vendor/requests/packages/charade/langgreekmodel.py
--pip/_vendor/requests/packages/charade/langhebrewmodel.py
--pip/_vendor/requests/packages/charade/langhungarianmodel.py
--pip/_vendor/requests/packages/charade/langthaimodel.py
--pip/_vendor/requests/packages/charade/latin1prober.py
--pip/_vendor/requests/packages/charade/mbcharsetprober.py
--pip/_vendor/requests/packages/charade/mbcsgroupprober.py
--pip/_vendor/requests/packages/charade/mbcssm.py
--pip/_vendor/requests/packages/charade/sbcharsetprober.py
--pip/_vendor/requests/packages/charade/sbcsgroupprober.py
--pip/_vendor/requests/packages/charade/sjisprober.py
--pip/_vendor/requests/packages/charade/universaldetector.py
--pip/_vendor/requests/packages/charade/utf8prober.py
 -pip/_vendor/requests/packages/chardet/__init__.py
 -pip/_vendor/requests/packages/chardet/big5freq.py
 -pip/_vendor/requests/packages/chardet/big5prober.py
@@ -321,7 +283,6 @@ Forwarded: not-needed
 -pip/_vendor/requests/packages/urllib3/poolmanager.py
 -pip/_vendor/requests/packages/urllib3/request.py
 -pip/_vendor/requests/packages/urllib3/response.py
--pip/_vendor/requests/packages/urllib3/util.py
 -pip/_vendor/requests/packages/urllib3/contrib/__init__.py
 -pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py
 -pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py
@@ -330,10 +291,17 @@ Forwarded: not-needed
 -pip/_vendor/requests/packages/urllib3/packages/six.py
 -pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py
 -pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py
+-pip/_vendor/requests/packages/urllib3/util/__init__.py
+-pip/_vendor/requests/packages/urllib3/util/connection.py
+-pip/_vendor/requests/packages/urllib3/util/request.py
+-pip/_vendor/requests/packages/urllib3/util/response.py
+-pip/_vendor/requests/packages/urllib3/util/ssl_.py
+-pip/_vendor/requests/packages/urllib3/util/timeout.py
+-pip/_vendor/requests/packages/urllib3/util/url.py
  pip/backwardcompat/__init__.py
  pip/commands/__init__.py
  pip/commands/bundle.py
-@@ -249,4 +67,4 @@
+@@ -217,4 +67,4 @@
  pip/vcs/bazaar.py
  pip/vcs/git.py
  pip/vcs/mercurial.py
