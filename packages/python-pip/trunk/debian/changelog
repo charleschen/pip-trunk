@@ -10,7 +10,7 @@ python-pip (1.5.6-1) UNRELEASED; urgency=medium
   * d/pip.dependencies: Added.  (Closes: #749692)
   * d/python-pip-whl.install: Updated.
   * d/README.debian: Added.
-  * Updates to the pip manpage.
+  * Updates to the pip manpage. (Closes: #687938)
     - Rewrote using reStructuredText
     - Fleshed out with more options
     - Removed pip.1
