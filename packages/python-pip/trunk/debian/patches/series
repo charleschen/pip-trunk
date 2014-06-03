@@ -1,3 +1,4 @@
 format_egg_string.patch
 de-vendorize.patch
 use-venv-wheels.patch
+better-error-message.patch

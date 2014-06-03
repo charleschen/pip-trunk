@@ -37,7 +37,7 @@ Depends: ca-certificates,
          python-six,
          ${misc:Depends},
          ${python:Depends}
-Recommends: build-essential, python-dev-all (>= 2.6)
+Recommends: build-essential, python-dev-all (>= 2.6), python-wheel
 Description: alternative Python package installer
  pip is a replacement for easy_install, and is intended to be an improved
  Python package installer.  It integrates with virtualenv, doesn't do partial
@@ -56,7 +56,7 @@ Depends: ca-certificates,
          python3-six,
          ${misc:Depends},
          ${python3:Depends}
-Recommends: build-essential, python3-dev (>= 3.2)
+Recommends: build-essential, python3-dev (>= 3.2), python3-wheel
 Description: alternative Python package installer - Python 3 version of the package
  pip is a replacement for easy_install, and is intended to be an improved
  Python package installer.  It integrates with virtualenv, doesn't do partial
