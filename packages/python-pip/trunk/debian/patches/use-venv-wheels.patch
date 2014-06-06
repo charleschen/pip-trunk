@@ -8,10 +8,12 @@ Forwarded: not-needed
 
 --- a/pip/__init__.py
 +++ b/pip/__init__.py
-@@ -5,6 +5,53 @@
+@@ -4,6 +4,56 @@
+ 
  import sys
  import re
- 
++import errno
++
 +# Debian virtual environment (venv) support.  When inside a venv, we have to
 +# add all the devendorized wheels to sys.path from inside the venv, otherwise
 +# the devendorized packages won't be found.  Only do this in a venv so it
@@ -55,13 +57,14 @@ Forwarded: not-needed
 +        for filename in os.listdir(wheel_dir):
 +            if os.path.splitext(filename)[1] == '.whl':
 +                sys.path.insert(0, os.path.join(wheel_dir, filename))
-+    except FileNotFoundError:
-+        # Oh well.
-+        pass
++    # FileNotFoundError doesn't exist in Python 2, but ignore it anyway.
++    except OSError as error:
++        if error.errno != errno.ENOENT:
++            raise
 +
+ 
  from pip.exceptions import InstallationError, CommandError, PipError
  from pip.log import logger
- from pip.util import get_installed_distributions, get_prog
 --- a/setup.py
 +++ b/setup.py
 @@ -41,7 +41,13 @@
