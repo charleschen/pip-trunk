@@ -1,11 +1,11 @@
-python-pip (1.5.6-3) UNRELEASED; urgency=medium
+python-pip (1.5.6-3) unstable; urgency=medium
 
   * Team upload.
   * Remove d/patches/format_egg_string.patch. This was worked around,
     upstream, in 1.0. And this patch now breaks pip uninstall in virtualenvs.
     (Closes: #751827)
 
- -- Stefano Rivera <stefanor@debian.org>  Sun, 16 Nov 2014 22:21:35 -0800
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 17 Nov 2014 11:18:13 -0800
 
 python-pip (1.5.6-2) unstable; urgency=medium
 
