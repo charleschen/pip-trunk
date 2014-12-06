@@ -1,9 +1,11 @@
-python-pip (1.5.6-4) UNRELEASED; urgency=medium
+python-pip (1.5.6-4) unstable; urgency=medium
 
   * Team upload.
   * Backport upstream fix to use non-predictable download directories
     - Fixes denial of service vector (CVE-2014-8991) (Closes: #725847)
     - Fixes retry failures (Closes: #769930)
+  * Add patch (reviewed by upstream, but not commited there yet) to prevent
+    pip from removing system python packages (Closes: #771794)
 
  -- Scott Kitterman <scott@kitterman.com>  Wed, 03 Dec 2014 13:46:31 -0500
 
