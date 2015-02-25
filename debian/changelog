@@ -1,3 +1,13 @@
+python-pip (1.5.6-5) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Use the .whl files for de-vendorized dependencies both inside and
+    outside the virtual environments.  (Closes: #744145)
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/patches/use-venv-wheels.patch: Renamed to use-wheels.patch
+
+ -- Barry Warsaw <barry@debian.org>  Wed, 25 Feb 2015 15:24:29 -0500
+
 python-pip (1.5.6-4) unstable; urgency=medium
 
   * Team upload.
