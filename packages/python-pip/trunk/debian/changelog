@@ -12,6 +12,7 @@ python-pip (6.1.1-1) UNRELEASED; urgency=medium
     - Update retrying to 1.3.3
     - Update Debian Python policy to name the new dependencies, all of
       which must be installed as -whl.
+    - Update d/patches/no-touch-system-files.patch
   * Team upload.
   * New upatream release.
   * d/control: Change Depends for python-pip and python3-pip to require
