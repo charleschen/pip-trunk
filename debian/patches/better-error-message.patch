@@ -6,16 +6,31 @@ Forwarded: not-needed
 
 --- a/pip/commands/wheel.py
 +++ b/pip/commands/wheel.py
-@@ -88,7 +88,11 @@
-         try:
-             import wheel.bdist_wheel
-         except ImportError:
--            raise CommandError("'pip wheel' requires the 'wheel' package. To fix this, run:  pip install wheel")
+@@ -101,11 +101,26 @@
+         self.parser.insert_option_group(0, cmd_opts)
+ 
+     def check_required_packages(self):
++        # 2015-04-30 barry@debian.org
++        #
++        # If we're outside of a venv, we want the error message to suggest
++        # apt-get installing the requisite package.  Inside a venv, pip
++        # install is still the right recommendation.
++        import sys
++        from pip.locations import running_under_virtualenv
++        if running_under_virtualenv():
++            recommendation = "pip install wheel"
++        else:
 +            if sys.version_info < (3,):
 +                debian_package = 'python-wheel'
 +            else:
 +                debian_package = 'python3-wheel'
-+            raise CommandError("'pip wheel' requires the 'wheel' package. To fix this, run: sudo apt-get install %s" % debian_package)
- 
-         try:
-             import pkg_resources
++            recommendation = "apt-get install {}".format(debian_package)
+         import_or_raise(
+             'wheel.bdist_wheel',
+             CommandError,
+             "'pip wheel' requires the 'wheel' package. To fix this, run: "
+-            "pip install wheel"
++            + recommendation
+         )
+         pkg_resources = import_or_raise(
+             'pkg_resources',
