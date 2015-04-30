@@ -1,3 +1,31 @@
+python-pip (6.1.1-1) UNRELEASED; urgency=medium
+
+  * DO NOT RELEASE.  TODO:
+    - Update distlib to 0.2.0
+    - Update colorama to 0.3.3
+    - Update requests to 2.6.0
+    - File ITP and get CacheControl 0.11.2 into Debian
+    - Update lockfile to 0.10.2
+    - File ITP and get progress 1.2 into Debian
+    - File ITP and get ipaddress into Debian (for Python 2.7 only)
+    - File ITP and get packaging 15.0 into Debian
+    - Update retrying to 1.3.3
+    - Update Debian Python policy to name the new dependencies, all of
+      which must be installed as -whl.
+  * Team upload.
+  * New upatream release.
+  * d/control: Change Depends for python-pip and python3-pip to require
+    python-pip-whl in all cases.  This fixes the problem where pip used
+    outside of a virtual environment can get broken by packages installed
+    into /usr/local.
+  * d/rules: No longer need to override dh_auto_build to remove pip/_vendor.
+  * d/patches:
+    - Removed de-vendorize.patch: No longer needed.
+    - Updated use-wheels.patch and better-error-message.patch for pip 6.1
+  * d/watch: Use pypi.debian.net mirror.
+
+ -- Barry Warsaw <barry@debian.org>  Thu, 30 Apr 2015 15:33:33 -0400
+
 python-pip (1.5.6-5) unstable; urgency=medium
 
   * Team upload.

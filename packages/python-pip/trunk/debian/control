@@ -28,13 +28,7 @@ Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-pip
 Package: python-pip
 Architecture: all
 Depends: ca-certificates,
-         python-colorama,
-         python-distlib,
-         python-html5lib,
-         python-pkg-resources,
-         python-requests,
-         python-setuptools (>= 0.6c1),
-         python-six,
+         python-pip-whl,
          ${misc:Depends},
          ${python:Depends}
 Recommends: build-essential, python-dev-all (>= 2.6), python-wheel
@@ -47,13 +41,7 @@ Description: alternative Python package installer
 Package: python3-pip
 Architecture: all
 Depends: ca-certificates,
-         python3-colorama,
-         python3-distlib,
-         python3-html5lib,
-         python3-pkg-resources,
-         python3-requests,
-         python3-setuptools,
-         python3-six,
+         python-pip-whl,
          ${misc:Depends},
          ${python3:Depends}
 Recommends: build-essential, python3-dev (>= 3.2), python3-wheel
