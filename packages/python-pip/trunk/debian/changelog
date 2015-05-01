@@ -2,7 +2,6 @@ python-pip (6.1.1-1) UNRELEASED; urgency=medium
 
   * DO NOT RELEASE.  TODO:
     - Update distlib to 0.2.0
-    - Update colorama to 0.3.3
     - Update requests to 2.6.0
     - File ITP and get CacheControl 0.11.2 into Debian
     - Update lockfile to 0.10.2
