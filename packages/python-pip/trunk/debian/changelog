@@ -1,10 +1,7 @@
 python-pip (6.1.1-1) UNRELEASED; urgency=medium
 
   * DO NOT RELEASE.  TODO:
-    - Update distlib to 0.2.0
-    - Update requests to 2.6.0
-    - File ITP and get CacheControl 0.11.2 into Debian
-    - Update lockfile to 0.10.2
+    - Update requests to 2.6.0 (2.7.0 in experimental)
     - File ITP and get progress 1.2 into Debian
     - File ITP and get ipaddress into Debian (for Python 2.7 only)
     - File ITP and get packaging 15.0 into Debian
